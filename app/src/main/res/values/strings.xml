@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">callories</string>
+    <string name="app_name">Calories 1.1.23</string>
+    <string name="phone_hint">+7 (___) ___-__-__</string>
+    <string name="remember_me">Запомнить меня</string>
+    <string name="enter">Войти</string>
+    <string name="password">Пароль</string>
+    <string name="not_register">Еще не зарегистрированы?</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="already_register">Уже зарегистрированы?</string>
+    <string name="policy_agreement">С обработкой персональных данных согласен</string>
+    <string name="repeat_password">Повторите пароль</string>
 </resources>
