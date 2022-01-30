@@ -9,4 +9,12 @@
     <string name="already_register">Уже зарегистрированы?</string>
     <string name="policy_agreement">С обработкой персональных данных согласен</string>
     <string name="repeat_password">Повторите пароль</string>
+    <string name="name">Имя</string>
+    <string name="add_activity">Добавить активность</string>
+    <string name="add_food">Добавить еду</string>
+    <string name="goal_burn_cal">Цель сжеч ккал за день</string>
+    <string name="burned_cal">Сожжено ккал за день</string>
+    <string name="eaten_cal">Потребил ккал за день</string>
+    <string name="sing_out">Выйти</string>
+    <string name="menu">Меню</string>
 </resources>
