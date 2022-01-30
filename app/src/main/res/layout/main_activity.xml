@@ -9,7 +9,7 @@
     tools:layout_editor_absoluteY="-49dp">
 
     <Button
-        android:id="@+id/addActivity"
+        android:id="@+id/submitBtn"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="260dp"
         android:layout_height="60dp"

@@ -17,4 +17,12 @@
     <string name="eaten_cal">Потребил ккал за день</string>
     <string name="sing_out">Выйти</string>
     <string name="menu">Меню</string>
+    <string name="a_logo_of_the_app">A logo of the app</string>
+    <string name="auth_data_not_correct">Данные для авторизации не могут быть пустыми</string>
+    <string name="user_not_found">Пользователь не найден.</string>
+    <string name="password_is_wrong">Пароль неверен.</string>
+    <string name="policy_must_be_accepted">Примите, пожалуйста, политику обработки данных</string>
+    <string name="fields_have_to_be_filled">Все поля должны быть заполнены.</string>
+    <string name="passwords_are_not_equal">Пароли не совпадают.</string>
+    <string name="user_was_found">Пользователь уже найден! Авторизуйтесь, пожалуйста!</string>
 </resources>
