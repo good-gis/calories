@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.callories.database.AppDatabase;
 import com.example.callories.database.entity.User;
+import com.example.callories.helpers.GlobalVariables;
 import com.example.callories.helpers.NotifyHelper;
 
 public class AuthActivity extends AppCompatActivity {
@@ -49,6 +50,7 @@ public class AuthActivity extends AppCompatActivity {
                                 user.isRememberMe = true;
                                 db.userDao().updateUsers(user);
                             }
+                            ((GlobalVariables) getApplication()).setIsUserAuth(true);
                             Intent intent = new Intent(AuthActivity.this, MainActivity.class);
                             AuthActivity.this.startActivity(intent);
                         } else {

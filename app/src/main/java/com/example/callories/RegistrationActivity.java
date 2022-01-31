@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.callories.database.AppDatabase;
 import com.example.callories.database.entity.User;
+import com.example.callories.helpers.GlobalVariables;
 import com.example.callories.helpers.NotifyHelper;
 
 public class RegistrationActivity extends AppCompatActivity {
@@ -65,7 +66,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     userNew.isRememberMe = false;
 
                     db.userDao().insertAll(userNew);
-
+                    ((GlobalVariables) getApplication()).setIsUserAuth(true);
                     Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
                     RegistrationActivity.this.startActivity(intent);
                 } else {
@@ -75,4 +76,6 @@ public class RegistrationActivity extends AppCompatActivity {
         });
 
     }
+
+
 }
