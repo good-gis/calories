@@ -39,43 +39,39 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
-        regBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!isPolicyAccepted.isChecked()) {
-                    NotifyHelper.showFastToast(getApplicationContext(), R.string.policy_must_be_accepted);
-                    return;
-                }
+        regBtn.setOnClickListener(v -> {
+            if (!isPolicyAccepted.isChecked()) {
+                NotifyHelper.showFastToast(getApplicationContext(), R.string.policy_must_be_accepted);
+                return;
+            }
 
-                if (regName.getText().toString().isEmpty() || regPhone.getText().toString().isEmpty() || regPassword.getText().toString().isEmpty() || regPassword2.getText().toString().isEmpty()) {
-                    NotifyHelper.showFastToast(getApplicationContext(), R.string.fields_have_to_be_filled);
-                    return;
-                }
+            if (regName.getText().toString().isEmpty() || regPhone.getText().toString().isEmpty() || regPassword.getText().toString().isEmpty() || regPassword2.getText().toString().isEmpty()) {
+                NotifyHelper.showFastToast(getApplicationContext(), R.string.fields_have_to_be_filled);
+                return;
+            }
 
-                User user = db.userDao().findByPhone(regPhone.getText().toString());
-                if (user != null) {
-                    NotifyHelper.showFastToast(getApplicationContext(), R.string.user_was_found);
-                    return;
-                }
+            User user = db.userDao().findByPhone(regPhone.getText().toString());
+            if (user != null) {
+                NotifyHelper.showFastToast(getApplicationContext(), R.string.user_was_found);
+                return;
+            }
 
-                if (regPassword.getText().toString().equals(regPassword2.getText().toString())) {
-                    User userNew = new User();
-                    userNew.name = regName.getText() + "";
-                    userNew.password = regPassword.getText() + "";
-                    userNew.phone = regPhone.getText() + "";
-                    userNew.isRememberMe = false;
+            if (regPassword.getText().toString().equals(regPassword2.getText().toString())) {
+                User userNew = new User();
+                userNew.name = regName.getText() + "";
+                userNew.password = regPassword.getText() + "";
+                userNew.phone = regPhone.getText() + "";
+                userNew.isRememberMe = false;
 
-                    db.userDao().insertAll(userNew);
-                    ((GlobalVariables) getApplication()).setIsUserAuth(true);
-                    Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
-                    RegistrationActivity.this.startActivity(intent);
-                } else {
-                    NotifyHelper.showFastToast(getApplicationContext(), R.string.passwords_are_not_equal);
-                }
+                db.userDao().insertAll(userNew);
+                ((GlobalVariables) getApplication()).setIsUserAuth(true);
+                Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+                RegistrationActivity.this.startActivity(intent);
+            } else {
+                NotifyHelper.showFastToast(getApplicationContext(), R.string.passwords_are_not_equal);
             }
         });
 
     }
-
 
 }

@@ -85,4 +85,9 @@ public class AuthActivity extends AppCompatActivity {
         return user.password.equals(password);
     }
 
+    @Override
+    public void onBackPressed() {
+        NotifyHelper.showFastToast(getApplicationContext(), R.string.sing_in_help);
+    }
+
 }

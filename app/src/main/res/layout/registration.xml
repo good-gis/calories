@@ -5,36 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F6F6"
-    tools:layout_editor_absoluteX="20dp"
-    tools:layout_editor_absoluteY="33dp">
-
-    <TextView
-        android:id="@+id/authLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="64dp"
-        android:text="@string/already_register"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regBtn" />
-
-    <CheckBox
-        android:id="@+id/privateData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/policy_agreement"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regPassword2" />
+    tools:layout_editor_absoluteX="-35dp"
+    tools:layout_editor_absoluteY="-88dp">
 
     <ImageView
         android:id="@+id/regLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/dna"
         app:layout_constraintBottom_toTopOf="@+id/personName"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,10 +21,10 @@
 
     <EditText
         android:id="@+id/personName"
-        android:layout_width="270dp"
+        android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="156dp"
         android:ems="10"
         android:hint="@string/name"
         android:inputType="textPersonName"
@@ -53,24 +32,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/regPhone"
-        android:layout_width="270dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/phone_hint"
-        android:inputType="phone"
-        android:textAlignment="viewStart"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personName" />
-
-    <EditText
         android:id="@+id/regPassword"
-        android:layout_width="270dp"
+        android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -80,10 +46,10 @@
 
     <EditText
         android:id="@+id/regPassword2"
-        android:layout_width="270dp"
+        android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/repeat_password"
         android:inputType="textPassword"
@@ -91,14 +57,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regPassword" />
 
+    <EditText
+        android:id="@+id/regPhone"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/phone_hint"
+        android:inputType="phone"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personName" />
+
+    <CheckBox
+        android:id="@+id/privateData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/policy_agreement"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPassword2" />
+
     <Button
         android:id="@+id/regBtn"
-        android:layout_width="220dp"
+        android:layout_width="260dp"
         android:layout_height="48dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="44dp"
         android:text="@string/register"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/privateData" />
+
+    <TextView
+        android:id="@+id/authLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/already_register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
