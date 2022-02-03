@@ -13,8 +13,8 @@
     <string name="add_activity">Добавить активность</string>
     <string name="add_food">Добавить еду</string>
     <string name="goal_burn_cal">Цель дефицита килокалорий:</string>
-    <string name="burned_cal">Сожжено килокалорий:</string>
-    <string name="eaten_cal">Потребил килокалорий:</string>
+    <string name="burned_cal">Сожжено килокалорий: 750</string>
+    <string name="eaten_cal">Потребил килокалорий: 1145</string>
     <string name="sing_out">Выйти</string>
     <string name="menu">Меню</string>
     <string name="a_logo_of_the_app">A logo of the app</string>
@@ -35,8 +35,4 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
 </resources>

@@ -48,7 +48,7 @@ public class AuthActivity extends AppCompatActivity {
                         if (isAuthDataCorrect) {
                             if (isRememberMe.isChecked()) {
                                 user.isRememberMe = true;
-                                db.userDao().updateUsers(user);
+                                db.userDao().updateUser(user);
                             }
                             ((GlobalVariables) getApplication()).setIsUserAuth(true);
                             Intent intent = new Intent(AuthActivity.this, MainActivity.class);

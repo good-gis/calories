@@ -11,7 +11,7 @@ import com.example.callories.database.entity.User;
 import java.util.List;
 
 @Dao
-public interface UserDao {
+public interface FoodDao {
     @Query("SELECT * FROM user")
     List<User> getAll();
 
