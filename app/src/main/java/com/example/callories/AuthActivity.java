@@ -51,7 +51,7 @@ public class AuthActivity extends AppCompatActivity {
                                 db.userDao().updateUser(user);
                             }
                             ((GlobalVariables) getApplication()).setIsUserAuth(true);
-                            Intent intent = new Intent(AuthActivity.this, MainActivity.class);
+                            Intent intent = new Intent(AuthActivity.this, MainDisplayActivity.class);
                             AuthActivity.this.startActivity(intent);
                         } else {
                             NotifyHelper.showFastToast(getApplicationContext(), R.string.password_is_wrong);
