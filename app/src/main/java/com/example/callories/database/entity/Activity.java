@@ -8,33 +8,24 @@ import androidx.room.PrimaryKey;
 import java.math.BigInteger;
 
 @Entity(foreignKeys = @ForeignKey(entity = User.class, parentColumns = "uid", childColumns = "user_id"))
-public class Food {
+public class Activity {
 
     @PrimaryKey(autoGenerate = true)
     public int uid;
-
-    @ColumnInfo(name = "food_name")
-    public String foodName;
-
-    @ColumnInfo(name = "qty")
-    public String qty;
-
-    @ColumnInfo(name = "cal")
-    public int cal;
-
-    @ColumnInfo(name = "protein")
-    public int protein;
-
-    @ColumnInfo(name = "fat")
-    public int fat;
-
-    @ColumnInfo(name = "carb")
-    public int carb;
 
     @ColumnInfo(name = "timestamp")
     public int timestamp;
 
     @ColumnInfo(name = "user_id")
     public int userId;
+
+    @ColumnInfo(name = "activity_name")
+    public String activityName;
+
+    @ColumnInfo(name = "time_of_execution")
+    public int timeOfExecution;
+
+    @ColumnInfo(name = "cal_burned")
+    public int calBurned;
 
 }

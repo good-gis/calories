@@ -18,6 +18,15 @@ public class User {
     @ColumnInfo(name = "password")
     public String password;
 
+    @ColumnInfo(name = "neck_cm")
+    public int neckCm;
+
+    @ColumnInfo(name = "belly_cm")
+    public int bellyCm;
+
+    @ColumnInfo(name = "age")
+    public int age;
+
     @ColumnInfo(name = "is_remember_me")
     public Boolean isRememberMe;
 }
