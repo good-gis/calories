@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2585" />
+        <entry key="app/src/main/res/layout/activity_add_weight.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main_display.xml" value="0.3590208522212149" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.44548952543822146" />
