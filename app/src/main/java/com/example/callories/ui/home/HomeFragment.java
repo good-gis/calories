@@ -53,9 +53,6 @@ public class HomeFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.action_settings) {
-            return true;
-        }
 
         if(item.getItemId() == R.id.action_sign_out) {
             ((GlobalVariables) context.getApplication()).setIsUserAuth(false);
