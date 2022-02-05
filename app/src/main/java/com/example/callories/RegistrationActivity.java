@@ -16,7 +16,7 @@ import com.example.callories.helpers.NotifyHelper;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    protected static AppDatabase db = MainActivity.db;
+    protected static AppDatabase db = MainDisplayActivity.db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +65,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 db.userDao().insertAll(userNew);
                 ((GlobalVariables) getApplication()).setIsUserAuth(true);
-                Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+                Intent intent = new Intent(RegistrationActivity.this, MainDisplayActivity.class);
                 RegistrationActivity.this.startActivity(intent);
             } else {
                 NotifyHelper.showFastToast(getApplicationContext(), R.string.passwords_are_not_equal);

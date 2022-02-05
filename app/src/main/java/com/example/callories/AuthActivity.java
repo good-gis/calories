@@ -16,7 +16,7 @@ import com.example.callories.helpers.GlobalVariables;
 import com.example.callories.helpers.NotifyHelper;
 
 public class AuthActivity extends AppCompatActivity {
-    protected static AppDatabase db = MainActivity.db;
+    protected static AppDatabase db = MainDisplayActivity.db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -3,22 +3,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single" android:id="@+id/main_nav_group">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_user_data"
+            android:icon="@drawable/ic_baseline_data_object_24"
+            android:title="@string/menu_user_data" />
+    </group>
+    <group android:checkableBehavior="single" android:id="@+id/calculating_nav_group">
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_imt_calculating"
+            android:icon="@drawable/ic_baseline_calculate_24"
+            android:title="@string/menu_imt_calculating" />
+        <item
+            android:id="@+id/nav_extra_weight_in_cal"
+            android:icon="@drawable/ic_baseline_fastfood_24"
+            android:title="@string/menu_extra_weight_in_cal" />
+        <item
+            android:id="@+id/nav_bazal_met"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="@string/menu_bazal_met" />
+        <item
+            android:id="@+id/nav_day_has_to_free_cal"
+            android:icon="@drawable/ic_baseline_stop_circle_24"
+            android:title="@string/menu_day_has_to_free_cal" />
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/data_nav_group">
+        <item
+            android:id="@+id/nav_weight_data"
+            android:icon="@drawable/ic_baseline_emoji_people_24"
+            android:title="@string/menu_weight_data" />
+        <item
+            android:id="@+id/nav_activity_data"
+            android:icon="@drawable/ic_baseline_downhill_skiing_24"
+            android:title="@string/menu_activity_data" />
+        <item
+            android:id="@+id/nav_food_data"
+            android:icon="@drawable/ic_baseline_food_bank_24"
+            android:title="@string/menu_food_data" />
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/general_nav_group">
+        <item
+            android:id="@+id/nav_about_app"
+            android:icon="@drawable/ic_baseline_contact_support_24"
+            android:title="@string/menu_about_app" />
         <item
             android:id="@+id/nav_support"
-            android:icon="@drawable/ic_baseline_contact_support_24"
+            android:icon="@drawable/ic_baseline_contact_phone_24"
             android:title="@string/menu_support" />
     </group>
+
 </menu>
