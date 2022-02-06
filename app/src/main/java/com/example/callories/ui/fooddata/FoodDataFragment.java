@@ -1,22 +1,35 @@
 package com.example.callories.ui.fooddata;
 
-import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.callories.MainDisplayActivity;
 import com.example.callories.R;
+import com.example.callories.database.AppDatabase;
+import com.example.callories.databinding.FoodDataFragmentBinding;
+import com.example.callories.databinding.FragmentHomeBinding;
+import com.example.callories.model.Food;
+import com.example.callories.recycleradapter.FoodRecyclerAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FoodDataFragment extends Fragment {
 
+    protected static AppDatabase db = MainDisplayActivity.db;
+    private final ArrayList<Food> foodList = new ArrayList<Food>();
     private FoodDataViewModel mViewModel;
+    private RecyclerView foodRecyclerView;
+    private FoodDataFragmentBinding binding;
 
     public static FoodDataFragment newInstance() {
         return new FoodDataFragment();
@@ -25,14 +38,32 @@ public class FoodDataFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.food_data_fragment, container, false);
+
+
+        binding = FoodDataFragmentBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+
+        foodRecyclerView = binding.foodDataRecyclerView;
+        setFoodInfo();
+        setAdapter();
+
+        return root;
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(FoodDataViewModel.class);
-        // TODO: Use the ViewModel
+    private void setFoodInfo() {
+        List<com.example.callories.database.entity.Food> dbFoods = db.foodDao().getAll();
+        for (int i = 0; i < dbFoods.size(); i++) {
+            Food food = new Food(dbFoods.get(i).foodName);
+            foodList.add(food);
+        }
+    }
+
+    private void setAdapter() {
+        FoodRecyclerAdapter foodRecyclerAdapter = new FoodRecyclerAdapter(foodList);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        foodRecyclerView.setLayoutManager(layoutManager);
+        foodRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        foodRecyclerView.setAdapter(foodRecyclerAdapter);
     }
 
 }
