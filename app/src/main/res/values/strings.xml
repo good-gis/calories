@@ -51,4 +51,9 @@
     <string name="menu_bazal_met">Базальный метаболизм</string>
     <string name="menu_day_has_to_free_cal">Ежедн. дефицит кКал</string>
     <string name="menu_about_app">О приложении</string>
+    <string name="add_activity_text">Добавление активности</string>
+    <string name="add_name_activity">Наименование активности</string>
+    <string name="add_activity_time_of_exec">Время выполнения, мин</string>
+    <string name="add_activity_btn_text">Добавить активность</string>
+    <string name="add_activity_burned_cal">Израсходовано кКал</string>
 </resources>

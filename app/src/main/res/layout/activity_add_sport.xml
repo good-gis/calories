@@ -4,6 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddSportActivity">
+    tools:context=".AddSportActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="67dp">
 
+    <EditText
+        android:id="@+id/addSportName"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="246dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="@string/add_name_activity"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/addTimeOfSport"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addTimeOfSport"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="@string/add_activity_time_of_exec"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/addCalSportBurned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addSportName" />
+
+    <Button
+        android:id="@+id/addSportBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/add_activity_btn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCalSportBurned" />
+
+    <EditText
+        android:id="@+id/addCalSportBurned"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/add_activity_burned_cal"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/addSportBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addTimeOfSport" />
 </androidx.constraintlayout.widget.ConstraintLayout>

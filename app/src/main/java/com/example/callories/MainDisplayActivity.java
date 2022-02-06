@@ -2,26 +2,21 @@ package com.example.callories;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
-import android.widget.Button;
-import android.widget.ProgressBar;
 
-import com.example.callories.database.AppDatabase;
-import com.example.callories.helpers.GlobalVariables;
-import com.example.callories.helpers.NotifyHelper;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import com.example.callories.database.AppDatabase;
 import com.example.callories.databinding.ActivityMainDisplayBinding;
+import com.example.callories.helpers.GlobalVariables;
+import com.example.callories.helpers.NotifyHelper;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainDisplayActivity extends AppCompatActivity {
 
@@ -45,8 +40,6 @@ public class MainDisplayActivity extends AppCompatActivity {
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_support, R.id.nav_food_data, R.id.nav_about_app, R.id.nav_activity_data, R.id.nav_bazal_met, R.id.nav_day_has_to_free_cal, R.id.nav_extra_weight, R.id.nav_imt, R.id.nav_user_data, R.id.nav_weight_data)
                 .setOpenableLayout(drawer)
@@ -71,8 +64,7 @@ public class MainDisplayActivity extends AppCompatActivity {
     }
 
 
-    private void authUserProcess()
-    {
+    private void authUserProcess() {
         processRememberAuthOfUser();
 
         if (!((GlobalVariables) this.getApplication()).getIsUserAuth()) {

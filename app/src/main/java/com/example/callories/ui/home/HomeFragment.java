@@ -16,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.callories.AddSportActivity;
+import com.example.callories.AddWeightActivity;
 import com.example.callories.AuthActivity;
 import com.example.callories.MainDisplayActivity;
 import com.example.callories.R;
@@ -36,12 +38,17 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-//        final Button singOut = binding.singOut;
-//        singOut.setOnClickListener(v -> {
-//            ((GlobalVariables) context.getApplication()).setIsUserAuth(false);
-//            Intent intent = new Intent(context, AuthActivity.class);
-//            context.startActivity(intent);
-//        });
+        final Button addActivity = binding.addActivity;
+        addActivity.setOnClickListener(v -> {
+            Intent intent = new Intent(context, AddSportActivity.class);
+            context.startActivity(intent);
+        });
+
+        final Button addFood = binding.addFood;
+        addFood.setOnClickListener(v -> {
+            Intent intent = new Intent(context, AddWeightActivity.class);
+            context.startActivity(intent);
+        });
 
         return root;
     }

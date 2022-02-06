@@ -61,7 +61,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/submitBtn"
+        android:id="@+id/addActivity"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="260dp"
         android:layout_height="60dp"
