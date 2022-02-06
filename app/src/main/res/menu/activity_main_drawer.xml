@@ -33,10 +33,10 @@
     </group>
 
     <group android:checkableBehavior="single" android:id="@+id/data_nav_group">
-        <item
-            android:id="@+id/nav_weight_data"
-            android:icon="@drawable/ic_baseline_emoji_people_24"
-            android:title="@string/menu_weight_data" />
+<!--        <item-->
+<!--            android:id="@+id/nav_weight_data"-->
+<!--            android:icon="@drawable/ic_baseline_emoji_people_24"-->
+<!--            android:title="@string/menu_weight_data" />-->
         <item
             android:id="@+id/nav_activity_data"
             android:icon="@drawable/ic_baseline_downhill_skiing_24"

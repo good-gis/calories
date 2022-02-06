@@ -9,19 +9,33 @@
     tools:layout_editor_absoluteY="67dp">
 
     <EditText
+        android:id="@+id/addActivityDate"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="168dp"
+        android:editable="false"
+        android:ems="10"
+        android:hint="Дата"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
         android:id="@+id/addSportName"
         android:layout_width="280dp"
         android:layout_height="60dp"
-        android:layout_marginTop="246dp"
+        android:layout_marginTop="18dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/add_name_activity"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/addTimeOfSport"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/addActivityDate" />
 
     <EditText
         android:id="@+id/addTimeOfSport"
