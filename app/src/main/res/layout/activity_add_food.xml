@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFoodActivity">
+
+
+  <Button
+      android:id="@+id/addFoodBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:text="Записать eду"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/qwe" />
+
+  <EditText
+      android:id="@+id/foodName"
+      android:layout_width="280dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="8dp"
+      android:ems="10"
+      android:hint="Наименование еды"
+      android:inputType="numberDecimal"
+      android:textAlignment="viewStart"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.503"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/addFoodDate" />
+
+  <EditText
+      android:id="@+id/foodCal"
+      android:layout_width="280dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="8dp"
+      android:ems="10"
+      android:hint="Каллорийност, кКал"
+      android:inputType="numberDecimal"
+      android:textAlignment="viewStart"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.503"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/foodName" />
+
+  <EditText
+      android:id="@+id/protein"
+      android:layout_width="280dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="8dp"
+      android:ems="10"
+      android:hint="Белки, гр"
+      android:inputType="numberDecimal"
+      android:textAlignment="viewStart"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.503"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/foodCal" />
+
+  <EditText
+      android:id="@+id/fat"
+      android:layout_width="280dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="8dp"
+      android:ems="10"
+      android:hint="Жиры, гр"
+      android:inputType="numberDecimal"
+      android:textAlignment="viewStart"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/protein" />
+
+  <EditText
+      android:id="@+id/carb"
+      android:layout_width="280dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="8dp"
+      android:ems="10"
+      android:hint="Углеводы, гр"
+      android:inputType="numberDecimal"
+      android:textAlignment="viewStart"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.503"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/fat" />
+
+  <EditText
+      android:id="@+id/qwe"
+      android:layout_width="280dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="8dp"
+      android:ems="10"
+      android:hint="Кол-во (текст)"
+      android:inputType="text"
+      android:textAlignment="viewStart"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.503"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/carb" />
+
+  <EditText
+      android:id="@+id/addFoodDate"
+      android:layout_width="280dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="116dp"
+      android:ems="10"
+      android:hint="Дата"
+      android:inputType="datetime"
+      android:textAlignment="viewStart"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.503"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

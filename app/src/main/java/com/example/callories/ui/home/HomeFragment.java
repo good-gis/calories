@@ -10,16 +10,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.callories.AddSportActivity;
-import com.example.callories.AddWeightActivity;
+import com.example.callories.AddFoodActivity;
 import com.example.callories.AuthActivity;
-import com.example.callories.MainDisplayActivity;
 import com.example.callories.R;
 import com.example.callories.databinding.FragmentHomeBinding;
 import com.example.callories.helpers.GlobalVariables;
@@ -46,7 +43,7 @@ public class HomeFragment extends Fragment {
 
         final Button addFood = binding.addFood;
         addFood.setOnClickListener(v -> {
-            Intent intent = new Intent(context, AddWeightActivity.class);
+            Intent intent = new Intent(context, AddFoodActivity.class);
             context.startActivity(intent);
         });
 

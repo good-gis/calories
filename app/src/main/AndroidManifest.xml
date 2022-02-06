@@ -14,7 +14,7 @@
             android:name=".AddSportActivity"
             android:exported="false" />
         <activity
-            android:name=".AddWeightActivity"
+            android:name=".AddFoodActivity"
             android:exported="false" />
         <activity
             android:name=".MainDisplayActivity"

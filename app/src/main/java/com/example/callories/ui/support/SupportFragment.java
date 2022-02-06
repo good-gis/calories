@@ -16,7 +16,6 @@ import android.widget.TextView;
 import com.example.callories.R;
 import com.example.callories.databinding.FragmentSlideshowBinding;
 import com.example.callories.databinding.FragmentSupportBinding;
-import com.example.callories.ui.slideshow.SlideshowViewModel;
 
 public class SupportFragment extends Fragment {
 
