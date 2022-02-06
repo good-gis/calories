@@ -13,8 +13,8 @@ public class Activity {
     @PrimaryKey(autoGenerate = true)
     public int uid;
 
-    @ColumnInfo(name = "timestamp")
-    public int timestamp;
+    @ColumnInfo(name = "date")
+    public String date;
 
     @ColumnInfo(name = "user_id")
     public int userId;

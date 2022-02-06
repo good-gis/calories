@@ -12,10 +12,10 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="12dp"
-      android:text="Записать eду"
+      android:text="@string/record_food"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/qwe" />
+      app:layout_constraintTop_toBottomOf="@+id/foodQty" />
 
   <EditText
       android:id="@+id/foodName"
@@ -23,13 +23,13 @@
       android:layout_height="60dp"
       android:layout_marginTop="8dp"
       android:ems="10"
-      android:hint="Наименование еды"
+      android:hint="@string/food_name"
       android:inputType="text"
       android:textAlignment="viewStart"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.503"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/addFoodDate" />
+      app:layout_constraintTop_toBottomOf="@+id/foodDate" />
 
   <EditText
       android:id="@+id/foodCal"
@@ -37,7 +37,7 @@
       android:layout_height="60dp"
       android:layout_marginTop="8dp"
       android:ems="10"
-      android:hint="Каллорийност, кКал"
+      android:hint="@string/calories"
       android:inputType="numberDecimal"
       android:textAlignment="viewStart"
       app:layout_constraintEnd_toEndOf="parent"
@@ -46,12 +46,12 @@
       app:layout_constraintTop_toBottomOf="@+id/foodName" />
 
   <EditText
-      android:id="@+id/protein"
+      android:id="@+id/foodProtein"
       android:layout_width="280dp"
       android:layout_height="60dp"
       android:layout_marginTop="8dp"
       android:ems="10"
-      android:hint="Белки, гр"
+      android:hint="@string/protein"
       android:inputType="numberDecimal"
       android:textAlignment="viewStart"
       app:layout_constraintEnd_toEndOf="parent"
@@ -60,58 +60,59 @@
       app:layout_constraintTop_toBottomOf="@+id/foodCal" />
 
   <EditText
-      android:id="@+id/fat"
+      android:id="@+id/foodFat"
       android:layout_width="280dp"
       android:layout_height="60dp"
       android:layout_marginTop="8dp"
       android:ems="10"
-      android:hint="Жиры, гр"
+      android:hint="@string/fat"
       android:inputType="numberDecimal"
       android:textAlignment="viewStart"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.496"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/protein" />
+      app:layout_constraintTop_toBottomOf="@+id/foodProtein" />
 
   <EditText
-      android:id="@+id/carb"
+      android:id="@+id/foodCarb"
       android:layout_width="280dp"
       android:layout_height="60dp"
       android:layout_marginTop="8dp"
       android:ems="10"
-      android:hint="Углеводы, гр"
+      android:hint="@string/carb"
       android:inputType="numberDecimal"
       android:textAlignment="viewStart"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.503"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/fat" />
+      app:layout_constraintTop_toBottomOf="@+id/foodFat" />
 
   <EditText
-      android:id="@+id/qwe"
+      android:id="@+id/foodQty"
       android:layout_width="280dp"
       android:layout_height="60dp"
       android:layout_marginTop="8dp"
       android:ems="10"
-      android:hint="Кол-во (текст)"
+      android:hint="@string/qwe_text"
       android:inputType="text"
       android:textAlignment="viewStart"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.503"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/carb" />
+      app:layout_constraintTop_toBottomOf="@+id/foodCarb" />
 
   <EditText
-      android:id="@+id/addFoodDate"
+      android:id="@+id/foodDate"
       android:layout_width="280dp"
       android:layout_height="60dp"
       android:layout_marginTop="116dp"
-      android:editable="false"
       android:ems="10"
-      android:hint="Дата"
+      android:hint="@string/data"
+      android:inputType="date|none"
       android:textAlignment="viewStart"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.503"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

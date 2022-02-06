@@ -31,8 +31,8 @@ public class Food {
     @ColumnInfo(name = "carb")
     public int carb;
 
-    @ColumnInfo(name = "timestamp")
-    public int timestamp;
+    @ColumnInfo(name = "date")
+    public String date;
 
     @ColumnInfo(name = "user_id")
     public int userId;

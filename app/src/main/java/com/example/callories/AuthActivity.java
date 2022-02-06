@@ -51,6 +51,7 @@ public class AuthActivity extends AppCompatActivity {
                                 db.userDao().updateUser(user);
                             }
                             ((GlobalVariables) getApplication()).setIsUserAuth(true);
+                            ((GlobalVariables) getApplication()).setUser(user);
                             Intent intent = new Intent(AuthActivity.this, MainDisplayActivity.class);
                             AuthActivity.this.startActivity(intent);
                         } else {

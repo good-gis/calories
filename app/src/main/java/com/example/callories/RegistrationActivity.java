@@ -65,6 +65,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 db.userDao().insertAll(userNew);
                 ((GlobalVariables) getApplication()).setIsUserAuth(true);
+                ((GlobalVariables) getApplication()).setUser(db.userDao().findByPhone(userNew.phone));
                 Intent intent = new Intent(RegistrationActivity.this, MainDisplayActivity.class);
                 RegistrationActivity.this.startActivity(intent);
             } else {
