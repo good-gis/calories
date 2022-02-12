@@ -26,4 +26,7 @@ public interface FoodDao {
 
     @Query("DELETE FROM food where uid = :uid")
     void deleteByID(int uid);
+
+    @Query("SELECT * FROM food WHERE date = :date and user_id = :userId")
+    List<Food> getFoodForADay(String date, int userId);
 }
