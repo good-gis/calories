@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.590032154340836" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2585" />
         <entry key="app/src/main/res/layout/activity_add_food.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/activity_add_sport.xml" value="0.33" />
@@ -15,7 +16,7 @@
         <entry key="app/src/main/res/layout/authorization.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.43394613082513894" />
         <entry key="app/src/main/res/layout/content_main_display.xml" value="0.21771834517342248" />
-        <entry key="app/src/main/res/layout/food_data_fragment.xml" value="0.44548952543822146" />
+        <entry key="app/src/main/res/layout/food_data_fragment.xml" value="0.5" />
         <entry key="app/src/main/res/layout/food_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.38961038961038963" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.44548952543822146" />

@@ -4,17 +4,22 @@ import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.callories.MainDisplayActivity;
 import com.example.callories.R;
+import com.example.callories.database.AppDatabase;
 import com.example.callories.model.Food;
 
 import java.util.ArrayList;
 
 public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapter.MyViewHolder> {
+
+    protected static AppDatabase db = MainDisplayActivity.db;
 
 
     private final ArrayList<Food> foodList;
@@ -52,6 +57,11 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
         } else {
             holder.itemView.setBackgroundColor(R.color.black);
         }
+
+        holder.foodDeleteBtn.setOnClickListener(v -> {
+            db.foodDao().deleteByID(foodList.get(position).getUid());
+            holder.itemView.setVisibility(View.GONE);
+        });
     }
 
     @Override
@@ -67,6 +77,7 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
         private final TextView foodProtein;
         private final TextView foodFat;
         private final TextView foodCarb;
+        private final Button foodDeleteBtn;
 
         public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
@@ -77,6 +88,7 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
             foodProtein = itemView.findViewById(R.id.foodProteinItemText);
             foodFat = itemView.findViewById(R.id.foodFatItemText);
             foodCarb = itemView.findViewById(R.id.foodCarbItemText);
+            foodDeleteBtn = itemView.findViewById(R.id.foodItemDelBtn);
         }
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,5 +9,107 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/foodDataRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</FrameLayout>
+        android:layout_height="650dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Итого за:"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodDataRecyclerView" />
+
+    <TextView
+        android:id="@+id/sumFat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Жиры:"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/sumCarb"
+        app:layout_constraintTop_toBottomOf="@+id/foodDataRecyclerView" />
+
+    <TextView
+        android:id="@+id/sumCarb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:text="Углеводы:"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/sumCalText"
+        app:layout_constraintTop_toBottomOf="@+id/sumFat" />
+
+    <TextView
+        android:id="@+id/sumFatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="150"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/sumCarbText"
+        app:layout_constraintTop_toBottomOf="@+id/foodDataRecyclerView" />
+
+    <TextView
+        android:id="@+id/sumCarbText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:text="160"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sumFatText" />
+
+    <TextView
+        android:id="@+id/sumCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="Калорий:"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/sumProtein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="Белки:"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sumCal" />
+
+    <TextView
+        android:id="@+id/sumCurrentDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="6/12/2022"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/foodDataRecyclerView" />
+
+    <TextView
+        android:id="@+id/sumCalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1765"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/sumCurrentDateText"
+        app:layout_constraintTop_toBottomOf="@+id/sumCurrentDateText" />
+
+    <TextView
+        android:id="@+id/sumProteinText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="81"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/sumCalText"
+        app:layout_constraintTop_toBottomOf="@+id/sumCalText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

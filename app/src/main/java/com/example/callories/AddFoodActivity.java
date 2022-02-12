@@ -19,7 +19,6 @@ public class AddFoodActivity extends AppCompatActivity {
 
     protected static AppDatabase db = MainDisplayActivity.db;
 
-    /* @TODO реализировать сохрание всех параметров еды */
     TextView foodName;
     TextView foodCal;
     TextView foodProtein;

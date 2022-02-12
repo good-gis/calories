@@ -23,4 +23,7 @@ public interface FoodDao {
 
     @Delete
     void delete(Food food);
+
+    @Query("DELETE FROM food where uid = :uid")
+    void deleteByID(int uid);
 }

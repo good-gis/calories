@@ -15,10 +15,6 @@ public class Food {
         this.userId = userId;
     }
 
-    public Food(String foodName) {
-        this.foodName = foodName;
-    }
-
     private int uid;
 
     private String foodName;
