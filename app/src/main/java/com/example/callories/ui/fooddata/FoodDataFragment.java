@@ -27,9 +27,8 @@ import java.util.List;
 public class FoodDataFragment extends Fragment {
 
     protected static AppDatabase db = MainDisplayActivity.db;
-    private final ArrayList<Food> foodList = new ArrayList<Food>();
+    private final ArrayList<Food> foodList = new ArrayList<>();
     Activity context;
-    private FoodDataViewModel mViewModel;
     private RecyclerView foodRecyclerView;
     private FoodDataFragmentBinding binding;
 

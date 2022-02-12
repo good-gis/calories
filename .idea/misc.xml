@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/layout/activity_add_food.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/activity_add_sport.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_add_weight.xml" value="0.44548952543822146" />
+        <entry key="app/src/main/res/layout/activity_data_fragment.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main_display.xml" value="0.3590208522212149" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.44548952543822146" />
@@ -16,7 +17,7 @@
         <entry key="app/src/main/res/layout/authorization.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.43394613082513894" />
         <entry key="app/src/main/res/layout/content_main_display.xml" value="0.21771834517342248" />
-        <entry key="app/src/main/res/layout/food_data_fragment.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/food_data_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/food_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.38961038961038963" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.44548952543822146" />
@@ -25,6 +26,7 @@
         <entry key="app/src/main/res/layout/main_activity.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/nav_header_main_display.xml" value="0.33" />
         <entry key="app/src/main/res/layout/registration.xml" value="0.44548952543822146" />
+        <entry key="app/src/main/res/layout/sport_item.xml" value="1.0" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.24947235120303926" />
         <entry key="app/src/main/res/menu/main_display.xml" value="0.29411764705882354" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.296" />
