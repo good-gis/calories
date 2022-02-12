@@ -77,7 +77,7 @@ public class ActivityDataFragment extends Fragment {
         }
 
         binding.sumCurrentDateSportText.setText(date);
-        binding.sumCurrentDateSportText.setText(String.valueOf(sumCalForADay));
+        binding.sumCalSportForADay.setText(String.valueOf(sumCalForADay));
     }
 
 

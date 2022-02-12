@@ -78,6 +78,7 @@ public class AddSportActivity extends AppCompatActivity {
         Activity activity = new Activity();
         activity.userId = ((GlobalVariables) getApplication()).getUser().uid;
         activity.date = activityDate.getText().toString();
+        activity.activityName = activityName.getText().toString();
         try {
             activity.calBurned = Integer.parseInt(activityCal.getText().toString());
             activity.timeOfExecution = Integer.parseInt(activityMin.getText().toString());
