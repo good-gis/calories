@@ -72,7 +72,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/eatenCaloriesText"
+        android:id="@+id/eatenCalories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -80,10 +80,10 @@
         android:text="@string/eaten_cal"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/burnedCaloriesText" />
+        app:layout_constraintTop_toBottomOf="@+id/burnedCalories" />
 
     <TextView
-        android:id="@+id/burnedCaloriesText"
+        android:id="@+id/burnedCalories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -112,4 +112,25 @@
         android:text="0 cal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/goalBurnCalories" />
+
+    <TextView
+        android:id="@+id/burnedCaloriesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="13dp"
+        android:text="33"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/burnedCalories"
+        app:layout_constraintTop_toBottomOf="@+id/goalBurnCalories" />
+
+    <TextView
+        android:id="@+id/eatenCaloriesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="750"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/burnedCaloriesText"
+        app:layout_constraintTop_toBottomOf="@+id/burnedCaloriesText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

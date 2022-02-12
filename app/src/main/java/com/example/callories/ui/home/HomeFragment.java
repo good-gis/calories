@@ -17,13 +17,21 @@ import androidx.fragment.app.Fragment;
 import com.example.callories.AddFoodActivity;
 import com.example.callories.AddSportActivity;
 import com.example.callories.AuthActivity;
+import com.example.callories.MainDisplayActivity;
 import com.example.callories.R;
+import com.example.callories.database.AppDatabase;
+import com.example.callories.database.entity.Food;
 import com.example.callories.databinding.FragmentHomeBinding;
+import com.example.callories.helpers.DateHelper;
 import com.example.callories.helpers.GlobalVariables;
+
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
+    protected static AppDatabase db = MainDisplayActivity.db;
     Activity context;
+    String date = DateHelper.getDate();
     private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -47,6 +55,11 @@ public class HomeFragment extends Fragment {
             context.startActivity(intent);
         });
 
+        binding.currentDate.setText(date);
+
+        if (((GlobalVariables) context.getApplication()).getUser() != null) {
+            calculateDataForUser();
+        }
         return root;
     }
 
@@ -71,5 +84,23 @@ public class HomeFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    private void calculateDataForUser() {
+        List<com.example.callories.database.entity.Activity> sportForADay = db.activityDao().getSportForADay(date, ((GlobalVariables) context.getApplication()).getUser().uid);
+        List<Food> foodForADay = db.foodDao().getFoodForADay(date, ((GlobalVariables) context.getApplication()).getUser().uid);
+
+        int sumBurnedCal = 0;
+        for (int i = 0; i < sportForADay.size(); i++) {
+            sumBurnedCal += sportForADay.get(i).calBurned;
+        }
+
+        int sumEatenCal = 0;
+        for (int i = 0; i < foodForADay.size(); i++) {
+            sumEatenCal += foodForADay.get(i).cal;
+        }
+
+        binding.burnedCaloriesText.setText(String.valueOf(sumBurnedCal));
+        binding.eatenCaloriesText.setText(String.valueOf(sumEatenCal));
     }
 }

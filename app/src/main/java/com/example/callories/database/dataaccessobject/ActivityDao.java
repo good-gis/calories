@@ -19,7 +19,7 @@ public interface ActivityDao {
     List<Activity> getAllForAUser(int userId);
 
     @Query("SELECT * FROM activity WHERE user_id = :userId and date = :date")
-    List<Activity> getAllForADayForUser(String date, int userId);
+    List<Activity> getSportForADay(String date, int userId);
 
     @Insert
     void insert(Activity activity);

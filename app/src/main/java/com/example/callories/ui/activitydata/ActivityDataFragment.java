@@ -69,7 +69,7 @@ public class ActivityDataFragment extends Fragment {
     }
 
     private void setSumSportInfoForADay(String date) {
-        List<com.example.callories.database.entity.Activity> listSportForADayForUser = db.activityDao().getAllForADayForUser(date, ((GlobalVariables) context.getApplication()).getUser().uid);
+        List<com.example.callories.database.entity.Activity> listSportForADayForUser = db.activityDao().getSportForADay(date, ((GlobalVariables) context.getApplication()).getUser().uid);
 
         int sumCalForADay = 0;
         for (int i = 0; i < listSportForADayForUser.size(); i++) {
