@@ -13,10 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.callories.MainDisplayActivity;
-import com.example.callories.R;
 import com.example.callories.database.AppDatabase;
 import com.example.callories.databinding.FoodDataFragmentBinding;
-import com.example.callories.databinding.FragmentHomeBinding;
 import com.example.callories.model.Food;
 import com.example.callories.recycleradapter.FoodRecyclerAdapter;
 
@@ -53,7 +51,7 @@ public class FoodDataFragment extends Fragment {
     private void setFoodInfo() {
         List<com.example.callories.database.entity.Food> dbFoods = db.foodDao().getAll();
         for (int i = 0; i < dbFoods.size(); i++) {
-            Food food = new Food(dbFoods.get(i).foodName);
+            Food food = new Food(dbFoods.get(i).uid, dbFoods.get(i).foodName, dbFoods.get(i).qty, dbFoods.get(i).cal, dbFoods.get(i).protein, dbFoods.get(i).fat, dbFoods.get(i).carb, dbFoods.get(i).date, dbFoods.get(i).userId);
             foodList.add(food);
         }
     }

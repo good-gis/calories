@@ -3,19 +3,172 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="160dp"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/foodDateItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="12/6/2022"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/foodNameItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:text="Наименование:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/foodQteItem"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/foodQtyItemText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="20dp"
+        android:text="200  гр"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/foodCalItemText"
+        app:layout_constraintTop_toBottomOf="@+id/foodNameItemText" />
+
+    <TextView
+        android:id="@+id/foodNameItemText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
         android:text="пельмени"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/foodQtyItemText"
+        app:layout_constraintTop_toTopOf="@+id/foodNameItem" />
+
+    <TextView
+        android:id="@+id/foodCalItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Калорийность:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/foodProteinItem"
+        app:layout_constraintTop_toBottomOf="@+id/foodQteItem" />
+
+    <TextView
+        android:id="@+id/foodCalItemText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="560"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/foodProteinItemText"
+        app:layout_constraintTop_toBottomOf="@+id/foodQtyItemText" />
+
+    <TextView
+        android:id="@+id/foodQteItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Количество:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/foodCalItem"
+        app:layout_constraintTop_toBottomOf="@+id/foodNameItem" />
+
+    <TextView
+        android:id="@+id/foodProteinItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Белки:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/foodFatItem"
+        app:layout_constraintTop_toBottomOf="@+id/foodCalItem" />
+
+    <TextView
+        android:id="@+id/foodProteinItemText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/foodFatItemText"
+        app:layout_constraintTop_toBottomOf="@+id/foodCalItemText" />
+
+    <TextView
+        android:id="@+id/foodFatItemText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="18"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/foodCarbItemText"
+        app:layout_constraintTop_toBottomOf="@+id/foodProteinItemText" />
+
+    <TextView
+        android:id="@+id/foodCarbItemText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="291dp"
+        android:text="21"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/foodCarbItem"
+        app:layout_constraintTop_toBottomOf="@+id/foodFatItemText" />
+
+    <TextView
+        android:id="@+id/foodFatItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Жиры:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/foodCarbItem"
+        app:layout_constraintTop_toBottomOf="@+id/foodProteinItem" />
+
+    <TextView
+        android:id="@+id/foodCarbItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="40dp"
+        android:text="Углеводы:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/foodCarbItemText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/foodFatItem" />
+
+    <Button
+        android:id="@+id/foodItemDelBtn"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_dark"
+        android:text="X"
+        app:iconTint="@android:color/holo_red_dark"
+        app:rippleColor="@android:color/holo_red_dark"
+        tools:layout_editor_absoluteX="337dp"
+        tools:layout_editor_absoluteY="65dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

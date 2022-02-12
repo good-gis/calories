@@ -22,12 +22,24 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
         this.foodList = foodList;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
-        private TextView foodName;
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
+        private final TextView foodName;
+        private final TextView foodDate;
+        private final TextView foodQty;
+        private final TextView foodCal;
+        private final TextView foodProtein;
+        private final TextView foodFat;
+        private final TextView foodCarb;
 
         public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
-            foodName = itemView.findViewById(R.id.foodNameItem);
+            foodName = itemView.findViewById(R.id.foodNameItemText);
+            foodDate = itemView.findViewById(R.id.foodDateItemText);
+            foodQty = itemView.findViewById(R.id.foodQtyItemText);
+            foodCal = itemView.findViewById(R.id.foodCalItemText);
+            foodProtein = itemView.findViewById(R.id.foodProteinItemText);
+            foodFat = itemView.findViewById(R.id.foodFatItemText);
+            foodCarb = itemView.findViewById(R.id.foodCarbItemText);
         }
     }
 
@@ -41,7 +53,19 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
     @Override
     public void onBindViewHolder(@NonNull FoodRecyclerAdapter.MyViewHolder holder, int position) {
         String foodNameFromList = foodList.get(position).getFoodName();
+        String foodDateFromList = foodList.get(position).getDate();
+        String foodQtyFromList = foodList.get(position).getQty();
+        String foodCalFromList = String.valueOf(foodList.get(position).getCal());
+        String foodProteinFromList = String.valueOf(foodList.get(position).getProtein());
+        String foodFatFromList = String.valueOf(foodList.get(position).getFat());
+        String foodCarbFromList = String.valueOf(foodList.get(position).getCarb());
         holder.foodName.setText(foodNameFromList);
+        holder.foodDate.setText(foodDateFromList);
+        holder.foodQty.setText(foodQtyFromList);
+        holder.foodCal.setText(foodCalFromList);
+        holder.foodProtein.setText(foodProteinFromList);
+        holder.foodFat.setText(foodFatFromList);
+        holder.foodCarb.setText(foodCarbFromList);
     }
 
     @Override
