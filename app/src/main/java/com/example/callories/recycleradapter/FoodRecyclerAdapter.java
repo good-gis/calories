@@ -17,31 +17,10 @@ import java.util.ArrayList;
 public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapter.MyViewHolder> {
 
 
-    private ArrayList<Food> foodList;
+    private final ArrayList<Food> foodList;
 
     public FoodRecyclerAdapter(ArrayList<Food> foodList) {
         this.foodList = foodList;
-    }
-
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
-        private final TextView foodName;
-        private final TextView foodDate;
-        private final TextView foodQty;
-        private final TextView foodCal;
-        private final TextView foodProtein;
-        private final TextView foodFat;
-        private final TextView foodCarb;
-
-        public MyViewHolder(@NonNull final View itemView) {
-            super(itemView);
-            foodName = itemView.findViewById(R.id.foodNameItemText);
-            foodDate = itemView.findViewById(R.id.foodDateItemText);
-            foodQty = itemView.findViewById(R.id.foodQtyItemText);
-            foodCal = itemView.findViewById(R.id.foodCalItemText);
-            foodProtein = itemView.findViewById(R.id.foodProteinItemText);
-            foodFat = itemView.findViewById(R.id.foodFatItemText);
-            foodCarb = itemView.findViewById(R.id.foodCarbItemText);
-        }
     }
 
     @NonNull
@@ -68,7 +47,7 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
         holder.foodProtein.setText(foodProteinFromList);
         holder.foodFat.setText(foodFatFromList);
         holder.foodCarb.setText(foodCarbFromList);
-        if(position % 2 == 0){
+        if (position % 2 == 0) {
             holder.itemView.setBackgroundColor(R.color.white);
         } else {
             holder.itemView.setBackgroundColor(R.color.black);
@@ -78,5 +57,26 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
     @Override
     public int getItemCount() {
         return foodList.size();
+    }
+
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
+        private final TextView foodName;
+        private final TextView foodDate;
+        private final TextView foodQty;
+        private final TextView foodCal;
+        private final TextView foodProtein;
+        private final TextView foodFat;
+        private final TextView foodCarb;
+
+        public MyViewHolder(@NonNull final View itemView) {
+            super(itemView);
+            foodName = itemView.findViewById(R.id.foodNameItemText);
+            foodDate = itemView.findViewById(R.id.foodDateItemText);
+            foodQty = itemView.findViewById(R.id.foodQtyItemText);
+            foodCal = itemView.findViewById(R.id.foodCalItemText);
+            foodProtein = itemView.findViewById(R.id.foodProteinItemText);
+            foodFat = itemView.findViewById(R.id.foodFatItemText);
+            foodCarb = itemView.findViewById(R.id.foodCarbItemText);
+        }
     }
 }

@@ -67,4 +67,5 @@
     <string name="notice_food_min_validation">Заполните, пожалуйста, наименование еды, калорийность</string>
     <string name="notice_sport_min_validation">Заполните, пожалуйста, все поля</string>
     <string name="notice_food_cal_validation">Введите целое число калорийности</string>
+    <string name="notice_food_validation">Введите числа для БЖУ и Калорийности</string>
 </resources>

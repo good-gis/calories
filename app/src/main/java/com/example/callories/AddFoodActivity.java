@@ -43,8 +43,8 @@ public class AddFoodActivity extends AppCompatActivity {
         foodCarb = findViewById(R.id.foodCarb);
         foodQty = findViewById(R.id.foodQty);
         foodBtn = findViewById(R.id.addFoodBtn);
+        foodDate = findViewById(R.id.foodDate);
 
-        foodDate = (TextView) findViewById(R.id.foodDate);
         foodDate.setText(DateHelper.getDate());
         foodDate.setOnClickListener(view -> {
             Calendar cal = Calendar.getInstance();
@@ -73,7 +73,14 @@ public class AddFoodActivity extends AppCompatActivity {
 
 
     protected boolean validateFoodData() {
-        return !foodName.getText().toString().equals("") && !foodCal.getText().toString().equals("");
+        try {
+            Integer.parseInt(foodCal.getText().toString());
+        } catch (NumberFormatException e) {
+            NotifyHelper.showFastToast(getApplicationContext(), R.string.notice_food_cal_validation);
+            return false;
+        }
+
+        return !foodName.getText().toString().equals("");
     }
 
 
@@ -82,15 +89,32 @@ public class AddFoodActivity extends AppCompatActivity {
         food.userId = ((GlobalVariables) getApplication()).getUser().uid;
         food.date = foodDate.getText().toString();
         food.foodName = foodName.getText().toString();
-        int cal;
-        try {
-            cal = Integer.parseInt(foodCal.getText().toString());
-        } catch (NumberFormatException e) {
-            NotifyHelper.showFastToast(getApplicationContext(), R.string.notice_food_cal_validation);
-            return;
+        food.cal = Integer.parseInt(foodCal.getText().toString());
+
+        if (foodQty.getText().toString().isEmpty()) {
+            food.qty = "0 гр";
+        } else {
+            food.qty = foodQty.getText().toString();
         }
 
-        food.cal = cal;
+        if (foodProtein.getText().toString().isEmpty()) {
+            food.protein = 0;
+        } else {
+            food.protein = Integer.parseInt(foodProtein.getText().toString());
+        }
+
+        if (foodFat.getText().toString().isEmpty()) {
+            food.fat = 0;
+        } else {
+            food.fat = Integer.parseInt(foodFat.getText().toString());
+        }
+
+        if (foodCarb.getText().toString().isEmpty()) {
+            food.carb = 0;
+        } else {
+            food.carb = Integer.parseInt(foodCarb.getText().toString());
+        }
+
         db.foodDao().insert(food);
         goToMainDisplayActivity();
     }
