@@ -1,13 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gender"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.userdata.UserDataFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+    <EditText
+        android:id="@+id/old2"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="50dp" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/old5"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="304dp"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <EditText
+        android:id="@+id/old6"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="304dp"
+        tools:layout_editor_absoluteY="256dp" />
+
+    <EditText
+        android:id="@+id/old4"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="173dp" />
+
+    <EditText
+        android:id="@+id/old3"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Возраст:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Окружность шеи:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <Switch
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:text="Пол мужской / женский"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:text="Окружность брюшной полости:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Физическая активность:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="173dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:text="Вес:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Рост:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="247dp">
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="397dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
