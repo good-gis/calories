@@ -6,17 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".ui.support.SupportFragment">
 
-    <TextView
-        android:id="@+id/text_support"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/themeOfMail"
+        android:layout_width="292dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint=" Тема письма"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSentMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="  Отправить"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOfMail" />
+
+    <EditText
+        android:id="@+id/textOfMail"
+        android:layout_width="294dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Текст письма"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/themeOfMail" />
+
+    <ImageButton
+        android:id="@+id/vk"
+        android:layout_width="58dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="48dp"
+        android:adjustViewBounds="false"
+        android:background="@color/white"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:src="@drawable/vkontakte"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSentMail"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/telegram"
+        android:layout_width="59dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="125dp"
+        android:background="@android:color/white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/telegram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSentMail"
+        tools:ignore="SpeakableTextPresentCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
