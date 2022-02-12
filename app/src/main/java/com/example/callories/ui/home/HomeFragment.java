@@ -14,8 +14,8 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.callories.AddSportActivity;
 import com.example.callories.AddFoodActivity;
+import com.example.callories.AddSportActivity;
 import com.example.callories.AuthActivity;
 import com.example.callories.R;
 import com.example.callories.databinding.FragmentHomeBinding;
@@ -23,8 +23,8 @@ import com.example.callories.helpers.GlobalVariables;
 
 public class HomeFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
     Activity context;
+    private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        if(item.getItemId() == R.id.action_sign_out) {
+        if (item.getItemId() == R.id.action_sign_out) {
             ((GlobalVariables) context.getApplication()).setIsUserAuth(false);
             Intent intent = new Intent(context, AuthActivity.class);
             context.startActivity(intent);

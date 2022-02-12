@@ -15,11 +15,14 @@ public interface FoodDao {
     @Query("SELECT * FROM food")
     List<Food> getAll();
 
+    @Query("SELECT * FROM food WHERE user_id = :userId")
+    List<Food> getAllForAUser(int userId);
+
     @Insert
     void insert(Food food);
 
     @Update
-    public void updateFood(Food food);
+    void updateFood(Food food);
 
     @Delete
     void delete(Food food);

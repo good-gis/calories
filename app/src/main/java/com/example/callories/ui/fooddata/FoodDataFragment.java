@@ -56,7 +56,7 @@ public class FoodDataFragment extends Fragment {
     }
 
     private void setFoodInfo() {
-        List<com.example.callories.database.entity.Food> dbFoods = db.foodDao().getAll();
+        List<com.example.callories.database.entity.Food> dbFoods = db.foodDao().getAllForAUser(((GlobalVariables) context.getApplication()).getUser().uid);
         for (int i = 0; i < dbFoods.size(); i++) {
             Food food = new Food(dbFoods.get(i).uid, dbFoods.get(i).foodName, dbFoods.get(i).qty, dbFoods.get(i).cal, dbFoods.get(i).protein, dbFoods.get(i).fat, dbFoods.get(i).carb, dbFoods.get(i).date, dbFoods.get(i).userId);
             foodList.add(food);
