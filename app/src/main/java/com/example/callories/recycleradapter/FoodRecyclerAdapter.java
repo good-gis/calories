@@ -1,5 +1,6 @@
 package com.example.callories.recycleradapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,6 +51,7 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
         return new MyViewHolder(itemView);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull FoodRecyclerAdapter.MyViewHolder holder, int position) {
         String foodNameFromList = foodList.get(position).getFoodName();
@@ -66,6 +68,11 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
         holder.foodProtein.setText(foodProteinFromList);
         holder.foodFat.setText(foodFatFromList);
         holder.foodCarb.setText(foodCarbFromList);
+        if(position % 2 == 0){
+            holder.itemView.setBackgroundColor(R.color.white);
+        } else {
+            holder.itemView.setBackgroundColor(R.color.black);
+        }
     }
 
     @Override
