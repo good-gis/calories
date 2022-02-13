@@ -21,24 +21,27 @@ public class User {
     @ColumnInfo(name = "gender")
     public String gender;
 
-    @ColumnInfo(name = "neck_cm")
+    @ColumnInfo(name = "neck_cm", defaultValue = "0")
     public int neckCm;
 
-    @ColumnInfo(name = "belly_cm")
+    @ColumnInfo(name = "belly_cm", defaultValue = "0")
     public int bellyCm;
 
-    @ColumnInfo(name = "age")
+    @ColumnInfo(name = "age", defaultValue = "0")
     public int age;
 
-    @ColumnInfo(name = "weight")
+    @ColumnInfo(name = "weight", defaultValue = "0.0")
     public double weight;
 
-    @ColumnInfo(name = "height")
+    @ColumnInfo(name = "imt", defaultValue = "0.0")
+    public double imt;
+
+    @ColumnInfo(name = "height", defaultValue = "0")
     public int height;
 
-    @ColumnInfo(name = "activity_level")
+    @ColumnInfo(name = "activity_level", defaultValue = "0")
     public int activityLevel;
 
-    @ColumnInfo(name = "is_remember_me")
+    @ColumnInfo(name = "is_remember_me", defaultValue = "false")
     public Boolean isRememberMe;
 }

@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/layout/activity_add_food.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/activity_add_sport.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_add_weight.xml" value="0.44548952543822146" />
+        <entry key="app/src/main/res/layout/activity_change_imt.xml" value="0.28003420265070544" />
         <entry key="app/src/main/res/layout/activity_data_fragment.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main_display.xml" value="0.3590208522212149" />
@@ -18,12 +19,14 @@
         <entry key="app/src/main/res/layout/authorization.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.43394613082513894" />
         <entry key="app/src/main/res/layout/content_main_display.xml" value="0.21771834517342248" />
+        <entry key="app/src/main/res/layout/dialog_change_imt.xml" value="0.29157759726378796" />
         <entry key="app/src/main/res/layout/food_data_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/food_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.38961038961038963" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/fragment_support.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/imt_fragment.xml" value="0.33" />
         <entry key="app/src/main/res/layout/main_activity.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/nav_header_main_display.xml" value="0.33" />
         <entry key="app/src/main/res/layout/registration.xml" value="0.44548952543822146" />

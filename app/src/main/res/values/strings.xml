@@ -74,6 +74,10 @@
     <string name="telegram_link">https://tlgg.ru/good_gis</string>
     <string name="vk_link">https://vk.com/good_gis</string>
     <string name="user_data_validation">Заполните, пожалуйста, все поля для выполения точного расчета</string>
+    <string name="dialog_change_imt_text">Вы действительно хотите изменить расчитанный ИМТ? Если да укажите, новый ИМТ ниже.</string>
+    <string name="dialog_change_imt_title">Изменить ИМТ</string>
+    <string name="imt_validation">Заполните, пожалуйста, данные пользователя в соответствующем разделе.</string>
+    <string name="imt_change_validation">Введите, пожалуйста, новый ИМТ</string>
     <string-array name="activityOfUser">
         <item>сидячий образ жизни</item>
         <item>легкая нагрузка 1–3 раза в неделю</item>

@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Callories">
         <activity
+            android:name=".ChangeImtActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddSportActivity"
             android:exported="false" />
         <activity

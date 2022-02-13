@@ -1,13 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.imt.ImtFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:id="@+id/textImt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:text="Ваш индекс массы тела равен:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textImt1"
+        android:layout_width="356dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="24dp"
+        android:text="Для мужчин в возрасте 20-40 лет с более чем 25% лишнего веса, считаются обладателями «ожирения», тогда как «здоровый» диапазон характеризуется от 8 до 19%."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BMIImage" />
+
+    <TextView
+        android:id="@+id/textImt2"
+        android:layout_width="356dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="15dp"
+        android:text="Для женщин в этой же возрастной группе, имеющие более 39% считаюсь больным «ожирением», а 21-33% считается «здоровым»."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textImt1" />
+
+    <Button
+        android:id="@+id/calculateImtBtn"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="29dp"
+        android:text="Расчитать ИМТ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textImt" />
+
+    <Button
+        android:id="@+id/changeImtBtn"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="18dp"
+        android:text="Изменить ИМТ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateImtBtn" />
+
+    <ImageView
+        android:id="@+id/BMIImage"
+        android:layout_width="349dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="79dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/imt_man"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeImtBtn" />
+
+    <TextView
+        android:id="@+id/imtNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:text="15.6"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textImt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
