@@ -1,23 +1,19 @@
 package com.example.callories.ui.userdata;
 
-import androidx.lifecycle.ViewModelProvider;
-
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.callories.MainDisplayActivity;
 import com.example.callories.R;
 import com.example.callories.database.AppDatabase;
 import com.example.callories.database.entity.User;
-import com.example.callories.databinding.FragmentHomeBinding;
 import com.example.callories.databinding.UserDataFragmentBinding;
 import com.example.callories.helpers.GlobalVariables;
 import com.example.callories.helpers.NotifyHelper;
@@ -42,15 +38,15 @@ public class UserDataFragment extends Fragment {
         binding = UserDataFragmentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        user = db.userDao().findByPhone(((GlobalVariables)context.getApplication()).getUser().phone);
+        user = db.userDao().findByPhone(((GlobalVariables) context.getApplication()).getUser().phone);
 
-        if(user.gender != null){
+        if (user.gender != null) {
             binding.savedData.setText(getSavedUserData());
             setFieldPreviousData();
         }
 
         binding.saveUserDataBtn.setOnClickListener(view -> {
-            if(validateUserData()){
+            if (validateUserData()) {
                 saveUserData();
                 binding.savedData.setText(getSavedUserData());
             } else {
@@ -62,8 +58,7 @@ public class UserDataFragment extends Fragment {
 
     }
 
-    private void saveUserData()
-    {
+    private void saveUserData() {
         user.gender = genderSwitcherMap();
         user.age = Integer.parseInt(binding.age.getText().toString());
         user.height = Integer.parseInt(binding.height.getText().toString());
@@ -74,21 +69,19 @@ public class UserDataFragment extends Fragment {
         db.userDao().updateUser(user);
     }
 
-    private void setFieldPreviousData()
-    {
+    private void setFieldPreviousData() {
         binding.age.setText(String.valueOf(user.age));
         binding.height.setText(String.valueOf(user.height));
         binding.weight.setText(String.valueOf(user.weight));
         binding.belly.setText(String.valueOf(user.bellyCm));
         binding.neck.setText(String.valueOf(user.neckCm));
         binding.spinnerActivity.setSelection(user.activityLevel);
-        if(user.gender.equals("woman")){
+        if (user.gender.equals("woman")) {
             binding.genderSwitch.setChecked(true);
         }
     }
 
-    private boolean validateUserData()
-    {
+    private boolean validateUserData() {
         return !binding.age.getText().toString().isEmpty() &&
                 !binding.height.getText().toString().isEmpty() &&
                 !binding.weight.getText().toString().isEmpty() &&
@@ -96,24 +89,21 @@ public class UserDataFragment extends Fragment {
                 !binding.neck.getText().toString().isEmpty();
     }
 
-    private String genderSwitcherMap()
-    {
-        if (binding.genderSwitch.isChecked()){
+    private String genderSwitcherMap() {
+        if (binding.genderSwitch.isChecked()) {
             return "woman";
         }
         return "man";
     }
 
-    private String genderSwitcherMap(String gender)
-    {
-        if (gender.equals("woman")){
+    private String genderSwitcherMap(String gender) {
+        if (gender.equals("woman")) {
             return "Женщина";
         }
         return "Мужчина";
     }
 
-    private String getSavedUserData()
-    {
+    private String getSavedUserData() {
         return "Имя: " + user.name + "\n" +
                 "Возраст: " + user.age + "\n" +
                 "Вес: " + user.weight + "\n" +
