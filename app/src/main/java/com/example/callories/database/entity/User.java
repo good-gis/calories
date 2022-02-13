@@ -18,6 +18,9 @@ public class User {
     @ColumnInfo(name = "password")
     public String password;
 
+    @ColumnInfo(name = "gender")
+    public String gender;
+
     @ColumnInfo(name = "neck_cm")
     public int neckCm;
 
@@ -26,6 +29,15 @@ public class User {
 
     @ColumnInfo(name = "age")
     public int age;
+
+    @ColumnInfo(name = "weight")
+    public double weight;
+
+    @ColumnInfo(name = "height")
+    public int height;
+
+    @ColumnInfo(name = "activity_level")
+    public int activityLevel;
 
     @ColumnInfo(name = "is_remember_me")
     public Boolean isRememberMe;
