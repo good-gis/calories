@@ -1,13 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.dailyfreecal.DailyFreeCalFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:id="@+id/textView18"
+        android:layout_width="286dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        android:text="Через сколько дней Вы хотите достич данной цели?"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/loseKg" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="34dp"
+        android:text="Сколько кг вы хотите сбросить?"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/goal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/weigh_scale"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/loseKg"
+        android:layout_width="92dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/dayToGoal"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
+        android:text="кг"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/loseKg"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:text="дней"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/dayToGoal"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <Button
+        android:id="@+id/calculateGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Расчитать"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayToGoal" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="31dp"
+        android:src="@drawable/calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="31dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/calories"
+        app:layout_constraintStart_toEndOf="@+id/dateToGoal"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="38dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/award"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateGoal"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/calToGoalText"
+        android:layout_width="35dp"
+        android:layout_height="18dp"
+        android:text="1210"
+        app:layout_constraintStart_toEndOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ккал/дн,"
+        app:layout_constraintStart_toEndOf="@+id/calToGoalText"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="40dp"
+        android:text="дней,"
+        app:layout_constraintStart_toEndOf="@+id/dayToGoalText"
+        app:layout_constraintTop_toBottomOf="@+id/calculateGoal" />
+
+    <TextView
+        android:id="@+id/dayToGoalText"
+        android:layout_width="19dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="41dp"
+        android:text="30"
+        app:layout_constraintStart_toEndOf="@+id/textView38"
+        app:layout_constraintTop_toBottomOf="@+id/calculateGoal" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="помимо базового обмена"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintStart_toStartOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:text="Чтобы достич цели через"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/calculateGoal" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="нужно сжигать доп. "
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintStart_toStartOf="@+id/textView38"
+        app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+    <TextView
+        android:id="@+id/dateToGoal"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="31dp"
+        android:text="31/12/2022"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+    <TextView
+        android:id="@+id/calToGoal"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="22dp"
+        android:text="1174"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="В расчете участвует:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/metabolism"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="18dp"
+        android:text="Базовый метаболизм"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="286dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Расчитать его можно в соответсвующем разделе"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+    <TextView
+        android:id="@+id/basalMetabolism"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="2354"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

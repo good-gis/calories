@@ -42,6 +42,12 @@ public class User {
     @ColumnInfo(name = "basal_metabolism", defaultValue = "0")
     public int basalMetabolism;
 
+    @ColumnInfo(name = "daily_burn_cal_for_a_goal", defaultValue = "0")
+    public int dailyBurnCalForAGoal;
+
+    @ColumnInfo(name = "dateGoalEnd", defaultValue = "1/1/2020")
+    public String dateGoalEnd;
+
     @ColumnInfo(name = "height", defaultValue = "0")
     public int height;
 
