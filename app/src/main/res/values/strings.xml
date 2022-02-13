@@ -78,8 +78,10 @@
     <string name="dialog_change_imt_title">Изменить ИМТ</string>
     <string name="imt_validation">Заполните, пожалуйста, данные пользователя в соответствующем разделе.</string>
     <string name="imt_change_validation">Введите, пожалуйста, новый ИМТ</string>
-    <string name="weight_validation_for_weight_in_cal">Введите, пожалуйста, данные о весе в разделе \'Данные пользователя\'</string>
-    <string name="imt_validation_for_weight_in_cal">Введите, пожалуйста, данные о ИМТ в разделе \'Расчет ИМТ\'</string>
+    <string name="weight_validation_text">Введите, пожалуйста, данные о весе в разделе \'Данные пользователя\'</string>
+    <string name="imt_validation_text">Введите, пожалуйста, данные о ИМТ в разделе \'Расчет ИМТ\'</string>
+    <string name="age_validation_text">Введите, пожалуйста, данные о возрасте в разделе \'Расчет ИМТ\'</string>
+    <string name="height_validation_text">Введите, пожалуйста, данные о росте в разделе \'Расчет ИМТ\'</string>
     <string-array name="activityOfUser">
         <item>сидячий образ жизни</item>
         <item>легкая нагрузка 1–3 раза в неделю</item>

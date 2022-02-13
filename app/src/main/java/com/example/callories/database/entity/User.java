@@ -39,6 +39,9 @@ public class User {
     @ColumnInfo(name = "extra_weight_in_cal", defaultValue = "0")
     public int extraWeightInCal;
 
+    @ColumnInfo(name = "basal_metabolism", defaultValue = "0")
+    public int basalMetabolism;
+
     @ColumnInfo(name = "height", defaultValue = "0")
     public int height;
 

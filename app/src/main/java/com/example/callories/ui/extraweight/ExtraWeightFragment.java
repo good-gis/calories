@@ -40,6 +40,7 @@ public class ExtraWeightFragment extends Fragment {
             User user = db.userDao().findByPhone(((GlobalVariables) context.getApplication()).getUser().phone);
             binding.weightOfUser.setText(String.valueOf(user.weight));
             binding.imtOfUser.setText(String.valueOf(user.imt));
+            binding.extraCalOfUser.setText(String.valueOf(user.extraWeightInCal));
 
             binding.weightToCalBtn.setOnClickListener(v -> {
                 if (validateUserData(user.weight, user.imt)) {
@@ -61,12 +62,12 @@ public class ExtraWeightFragment extends Fragment {
 
     private boolean validateUserData(double weight, double imt) {
         if (weight == 0.0) {
-            NotifyHelper.showFastToast(context, R.string.weight_validation_for_weight_in_cal);
+            NotifyHelper.showFastToast(context, R.string.weight_validation_text);
             return false;
         }
 
         if (imt == 0.0) {
-            NotifyHelper.showFastToast(context, R.string.imt_validation_for_weight_in_cal);
+            NotifyHelper.showFastToast(context, R.string.imt_validation_text);
             return false;
         }
 
