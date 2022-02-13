@@ -36,6 +36,9 @@ public class User {
     @ColumnInfo(name = "imt", defaultValue = "0.0")
     public double imt;
 
+    @ColumnInfo(name = "extra_weight_in_cal", defaultValue = "0")
+    public int extraWeightInCal;
+
     @ColumnInfo(name = "height", defaultValue = "0")
     public int height;
 
