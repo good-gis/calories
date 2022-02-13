@@ -73,4 +73,13 @@
     <string name="my_email">glushkov1997@icloud.com</string>
     <string name="telegram_link">https://tlgg.ru/good_gis</string>
     <string name="vk_link">https://vk.com/good_gis</string>
+    <string-array name="activityOfUser">
+        <item>минимальная активность/сидячий образ жизни</item>
+        <item>легкая нагрузка 1–3 раза в неделю</item>
+        <item>тренировки 3–5 раз в неделю</item>
+        <item>тренировки ежедневно</item>
+        <item>тяжелая физическая работа/тренировки 2 раза в день</item>
+    </string-array>
+
+
 </resources>
