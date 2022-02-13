@@ -150,7 +150,7 @@
         android:layout_height="18dp"
         android:text="1210"
         app:layout_constraintStart_toEndOf="@+id/textView27"
-        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+        app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
     <TextView
         android:id="@+id/textView29"
@@ -158,26 +158,7 @@
         android:layout_height="wrap_content"
         android:text="ккал/дн,"
         app:layout_constraintStart_toEndOf="@+id/calToGoalText"
-        app:layout_constraintTop_toBottomOf="@+id/textView28" />
-
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="40dp"
-        android:text="дней,"
-        app:layout_constraintStart_toEndOf="@+id/dayToGoalText"
-        app:layout_constraintTop_toBottomOf="@+id/calculateGoal" />
-
-    <TextView
-        android:id="@+id/dayToGoalText"
-        android:layout_width="19dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="41dp"
-        android:text="30"
-        app:layout_constraintStart_toEndOf="@+id/textView38"
-        app:layout_constraintTop_toBottomOf="@+id/calculateGoal" />
+        app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
     <TextView
         android:id="@+id/textView31"
@@ -193,7 +174,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="41dp"
-        android:text="Чтобы достич цели через"
+        android:text="Чтобы достич цели"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/calculateGoal" />
 
@@ -262,8 +243,8 @@
 
     <TextView
         android:id="@+id/textView36"
-        android:layout_width="286dp"
-        android:layout_height="39dp"
+        android:layout_width="342dp"
+        android:layout_height="40dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Расчитать его можно в соответсвующем разделе"

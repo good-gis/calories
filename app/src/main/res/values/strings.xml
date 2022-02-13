@@ -82,6 +82,9 @@
     <string name="imt_validation_text">Введите, пожалуйста, данные о ИМТ в разделе \'Расчет ИМТ\'</string>
     <string name="age_validation_text">Введите, пожалуйста, данные о возрасте в разделе \'Расчет ИМТ\'</string>
     <string name="height_validation_text">Введите, пожалуйста, данные о росте в разделе \'Расчет ИМТ\'</string>
+    <string name="kg_validation_text">Введите, пожалуйста, цель кг</string>
+    <string name="day_validation_text">Введите, пожалуйста, кол-во дней до достижения цели</string>
+    <string name="basal_met_validation_text">Расчитайте, пожалуйста, базальный метаболизм в одноименном разделе</string>
     <string-array name="activityOfUser">
         <item>сидячий образ жизни</item>
         <item>легкая нагрузка 1–3 раза в неделю</item>
