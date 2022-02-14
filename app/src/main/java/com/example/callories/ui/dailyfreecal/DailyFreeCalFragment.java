@@ -42,7 +42,7 @@ public class DailyFreeCalFragment extends Fragment {
             User user = db.userDao().findByPhone(((GlobalVariables) context.getApplication()).getUser().phone);
             binding.calToGoal.setText(String.valueOf(user.dailyBurnCalForAGoal));
             binding.basalMetabolism.setText(String.valueOf(user.basalMetabolism));
-            if(user.dateGoalEnd == null){
+            if (user.dateGoalEnd == null) {
                 binding.dateFinishGoal.setText("цели нет");
             }
 

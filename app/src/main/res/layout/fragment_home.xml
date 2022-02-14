@@ -6,59 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <ProgressBar
-        android:id="@+id/goalBurnCalories"
-        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="41dp"
-        android:indeterminate="false"
-        android:max="750"
-        android:progress="610"
-        android:progressBackgroundTint="#87D176"
-        android:progressTint="#FF0000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goalBurnCaloriesText" />
-
     <TextView
         android:id="@+id/currentDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="16dp"
         android:text="03.02.2022"
-        android:textSize="20sp"
+        android:textColor="#009688"
+        android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/goalBurnCaloriesText"
-        android:layout_width="258dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="628dp"
-        android:text="@string/goal_burn_cal"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentDate" />
-
-    <Button
-        android:id="@+id/addFood"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="260dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="140dp"
-        android:text="@string/add_food"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/addActivity"
@@ -66,71 +26,151 @@
         android:layout_width="260dp"
         android:layout_height="60dp"
         android:layout_marginStart="72dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="36dp"
         android:text="@string/add_activity"
         app:layout_constraintBottom_toTopOf="@+id/addFood"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/eatenCalories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/eaten_cal"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/burnedCalories" />
-
-    <TextView
-        android:id="@+id/burnedCalories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="13dp"
-        android:text="@string/burned_cal"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goalBurnCalories" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="41dp"
-        android:text="750 cal"
+        android:id="@+id/textView24"
+        android:layout_width="336dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="Расчитать пустые параментры Вы можете в выпадающем меню"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/goalBurnCalories" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="31dp"
-        android:text="0 cal"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/goalBurnCalories" />
+        app:layout_constraintTop_toBottomOf="@+id/addFood"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/burnedCaloriesText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="13dp"
-        android:text="33"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/burnedCalories"
-        app:layout_constraintTop_toBottomOf="@+id/goalBurnCalories" />
+    <Button
+        android:id="@+id/addFood"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="132dp"
+        android:text="@string/add_food"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="39dp"
+        android:src="@drawable/fire"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentDate" />
 
     <TextView
         android:id="@+id/eatenCaloriesText"
+        android:layout_width="100dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="28dp"
+        android:text="750"
+        android:textColor="#4CAF50"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentDate" />
+
+    <TextView
+        android:id="@+id/burnedCaloriesText"
+        android:layout_width="100dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="39dp"
+        android:text="33"
+        android:textColor="#F44336"
+        android:textSize="48sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/currentDate" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="39dp"
+        android:src="@drawable/diet"
+        app:layout_constraintEnd_toStartOf="@+id/eatenCaloriesText"
+        app:layout_constraintTop_toBottomOf="@+id/currentDate" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/metabolism"
+        app:layout_constraintEnd_toStartOf="@+id/imageView13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/bmi"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+        app:layout_constraintEnd_toStartOf="@+id/imageView19"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView18"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/scale"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/basalMetabolismTextHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="750"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/burnedCaloriesText"
-        app:layout_constraintTop_toBottomOf="@+id/burnedCaloriesText" />
+        android:layout_marginTop="25dp"
+        android:text="2065"
+        android:textColor="#2196F3"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/imtTextHome"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+
+    <TextView
+        android:id="@+id/imtTextHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20.365"
+        android:textColor="#2196F3"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/weightTextHome"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/basalMetabolismTextHome"
+        app:layout_constraintTop_toTopOf="@+id/basalMetabolismTextHome" />
+
+    <TextView
+        android:id="@+id/weightTextHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="103.6"
+        android:textColor="#2196F3"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imtTextHome"
+        app:layout_constraintTop_toTopOf="@+id/imtTextHome" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
