@@ -21,6 +21,7 @@ import com.example.callories.MainDisplayActivity;
 import com.example.callories.R;
 import com.example.callories.database.AppDatabase;
 import com.example.callories.database.entity.Food;
+import com.example.callories.database.entity.User;
 import com.example.callories.databinding.FragmentHomeBinding;
 import com.example.callories.helpers.DateHelper;
 import com.example.callories.helpers.GlobalVariables;
@@ -58,7 +59,11 @@ public class HomeFragment extends Fragment {
         binding.currentDate.setText(date);
 
         if (((GlobalVariables) context.getApplication()).getUser() != null) {
-            calculateDataForUser();
+            calculateFoodAndSportDataForUser();
+            User user = ((GlobalVariables) context.getApplication()).getUser();
+            binding.basalMetabolismTextHome.setText(String.valueOf(user.basalMetabolism));
+            binding.imtTextHome.setText(String.valueOf(user.imt));
+            binding.weightTextHome.setText(String.valueOf(user.weight));
         }
         return root;
     }
@@ -86,7 +91,7 @@ public class HomeFragment extends Fragment {
         binding = null;
     }
 
-    private void calculateDataForUser() {
+    private void calculateFoodAndSportDataForUser() {
         List<com.example.callories.database.entity.Activity> sportForADay = db.activityDao().getSportForADay(date, ((GlobalVariables) context.getApplication()).getUser().uid);
         List<Food> foodForADay = db.foodDao().getFoodForADay(date, ((GlobalVariables) context.getApplication()).getUser().uid);
 
