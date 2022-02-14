@@ -126,7 +126,7 @@
 
     <TextView
         android:id="@+id/calToGoal"
-        android:layout_width="110dp"
+        android:layout_width="140dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="22dp"
@@ -166,27 +166,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="48dp"
         android:text="В расчете участвует:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calToGoal" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="17dp"
-        android:src="@drawable/metabolism"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
     <TextView
         android:id="@+id/textView35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
         android:text="Базовый метаболизм"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toBottomOf="@+id/textView34" />
@@ -196,7 +186,7 @@
         android:layout_width="342dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:text="Расчитать его можно в соответсвующем разделе"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView12" />
@@ -205,12 +195,43 @@
         android:id="@+id/basalMetabolism"
         android:layout_width="75dp"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:text="2354"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/metabolism"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="37dp"
+        android:src="@drawable/calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.629"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+    <TextView
+        android:id="@+id/dateFinishGoal"
+        android:layout_width="96dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        android:text="1/12/2021"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

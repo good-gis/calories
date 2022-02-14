@@ -42,13 +42,17 @@ public class DailyFreeCalFragment extends Fragment {
             User user = db.userDao().findByPhone(((GlobalVariables) context.getApplication()).getUser().phone);
             binding.calToGoal.setText(String.valueOf(user.dailyBurnCalForAGoal));
             binding.basalMetabolism.setText(String.valueOf(user.basalMetabolism));
+            if(user.dateGoalEnd == null){
+                binding.dateFinishGoal.setText("цели нет");
+            }
 
             binding.calculateGoal.setOnClickListener(v -> {
                 if (validateUserData(binding.loseKg, binding.dayToGoal, user.basalMetabolism)) {
-                    int calGoal = calculateCalToGoal(Double.parseDouble(binding.loseKg.getText().toString()), Integer.parseInt(binding.dayToGoal.getText().toString()));
+                    int calGoal = calculateCalGoalPerDay(Double.parseDouble(binding.loseKg.getText().toString()), Integer.parseInt(binding.dayToGoal.getText().toString()), user.basalMetabolism);
                     binding.calToGoal.setText(String.valueOf(calGoal));
                     user.dailyBurnCalForAGoal = calGoal;
                     user.dateGoalEnd = DateHelper.getDateAfterDays(Integer.parseInt(binding.dayToGoal.getText().toString()));
+                    binding.dateFinishGoal.setText(user.dateGoalEnd);
                     db.userDao().updateUser(user);
                 }
             });
@@ -76,9 +80,8 @@ public class DailyFreeCalFragment extends Fragment {
         return true;
     }
 
-    private int calculateCalToGoal(double kg, int days)
-    {
-        return (int) ((kg*7716)/days);
+    private int calculateCalGoalPerDay(double kg, int days, int basalMetabolism) {
+        return (int) ((kg * 7716) / days) - basalMetabolism;
     }
 
 }
