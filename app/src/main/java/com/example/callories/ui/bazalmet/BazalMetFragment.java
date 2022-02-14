@@ -61,7 +61,7 @@ public class BazalMetFragment extends Fragment {
 
     private int calculateBasalMetabolism(String gender, double weight, int height, int age, double activityRatio) {
         if (gender.equals("woman")) {
-            double basalMet = (447.593 + (9.247 * weight) + (3.098 * height) * (4.330 * age)) * activityRatio;
+            double basalMet = (447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age)) * activityRatio;
             return (int) basalMet;
         }
 

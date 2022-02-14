@@ -56,7 +56,7 @@ public class ExtraWeightFragment extends Fragment {
     }
 
     private int extraCalCalculate(double weight, double imt) {
-        double result = weight * imt / 100 * 7716;
+        double result = weight * (imt - 20) / 100 * 7716;
         return (int) result;
     }
 
