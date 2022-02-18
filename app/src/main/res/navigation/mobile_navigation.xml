@@ -7,57 +7,57 @@
 
     <fragment
         android:id="@+id/nav_about_app"
-        android:name="com.example.callories.ui.aboutapp.AboutAppFragment"
+        android:name="com.iglushkov.calories.ui.aboutapp.AboutAppFragment"
         android:label="@string/menu_about_app"
         tools:layout="@layout/about_app_fragment" />
     <fragment
         android:id="@+id/nav_activity_data"
-        android:name="com.example.callories.ui.activitydata.ActivityDataFragment"
+        android:name="com.iglushkov.calories.ui.activitydata.ActivityDataFragment"
         android:label="@string/menu_activity_data"
         tools:layout="@layout/activity_data_fragment" />
     <fragment
         android:id="@+id/nav_bazal_met"
-        android:name="com.example.callories.ui.bazalmet.BasalMetabolismFragment"
+        android:name="com.iglushkov.calories.ui.bazalmet.BasalMetabolismFragment"
         android:label="@string/menu_bazal_met"
         tools:layout="@layout/bazal_met_fragment" />
     <fragment
         android:id="@+id/nav_extra_weight"
-        android:name="com.example.callories.ui.extraweight.ExtraWeightFragment"
+        android:name="com.iglushkov.calories.ui.extraweight.ExtraWeightFragment"
         android:label="@string/menu_extra_weight_in_cal"
         tools:layout="@layout/extra_weight_fragment" />
     <fragment
         android:id="@+id/nav_imt"
-        android:name="com.example.callories.ui.imt.ImtFragment"
+        android:name="com.iglushkov.calories.ui.imt.ImtFragment"
         android:label="@string/menu_imt_calculating"
         tools:layout="@layout/imt_fragment" />
     <fragment
         android:id="@+id/nav_support"
-        android:name="com.example.callories.ui.support.SupportFragment"
+        android:name="com.iglushkov.calories.ui.support.SupportFragment"
         android:label="@string/menu_support"
         tools:layout="@layout/fragment_support" />
     <fragment
         android:id="@+id/nav_food_data"
-        android:name="com.example.callories.ui.fooddata.FoodDataFragment"
+        android:name="com.iglushkov.calories.ui.fooddata.FoodDataFragment"
         android:label="@string/menu_food_data"
         tools:layout="@layout/food_data_fragment" />
     <fragment
         android:id="@+id/nav_user_data"
-        android:name="com.example.callories.ui.userdata.UserDataFragment"
+        android:name="com.iglushkov.calories.ui.userdata.UserDataFragment"
         android:label="@string/menu_user_data"
         tools:layout="@layout/user_data_fragment" />
     <fragment
         android:id="@+id/nav_weight_data"
-        android:name="com.example.callories.ui.weightdata.WeightDataFragment"
+        android:name="com.iglushkov.calories.ui.weightdata.WeightDataFragment"
         android:label="@string/menu_weight_data"
         tools:layout="@layout/weight_data_fragment" />
     <fragment
         android:id="@+id/nav_day_has_to_free_cal"
-        android:name="com.example.callories.ui.dailyfreecal.DailyFreeCalFragment"
+        android:name="com.iglushkov.calories.ui.dailyfreecal.DailyFreeCalFragment"
         android:label="@string/menu_day_has_to_free_cal"
         tools:layout="@layout/daily_free_cal_fragment" />
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.callories.ui.home.HomeFragment"
+        android:name="com.iglushkov.calories.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 </navigation>
