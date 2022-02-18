@@ -24,4 +24,10 @@ public class GlobalVariables extends Application {
     public void setIsUserAuth(boolean isUserAuth) {
         this.isUserAuth = isUserAuth;
     }
+
+    public void createUserAuthSession(User user)
+    {
+        this.setIsUserAuth(true);
+        this.setUser(user);
+    }
 }

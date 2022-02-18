@@ -30,10 +30,10 @@ public class AddSportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_sport);
 
-        activityDate = (TextView) findViewById(R.id.addActivityDate);
-        activityName = (TextView) findViewById(R.id.addSportName);
-        activityMin = (TextView) findViewById(R.id.addTimeOfSport);
-        activityCal = (TextView) findViewById(R.id.addCalSportBurned);
+        activityDate = findViewById(R.id.addActivityDate);
+        activityName = findViewById(R.id.addSportName);
+        activityMin = findViewById(R.id.addTimeOfSport);
+        activityCal = findViewById(R.id.addCalSportBurned);
         Button addActivityBtn = findViewById(R.id.addSportBtn);
 
 
