@@ -32,10 +32,6 @@ public class FoodDataFragment extends Fragment {
     private RecyclerView foodRecyclerView;
     private FoodDataFragmentBinding binding;
 
-    public static FoodDataFragment newInstance() {
-        return new FoodDataFragment();
-    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {

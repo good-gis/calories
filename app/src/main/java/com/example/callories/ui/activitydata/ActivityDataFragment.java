@@ -31,10 +31,6 @@ public class ActivityDataFragment extends Fragment {
     private ActivityDataFragmentBinding binding;
     private RecyclerView activityRecyclerView;
 
-    public static ActivityDataFragment newInstance() {
-        return new ActivityDataFragment();
-    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {

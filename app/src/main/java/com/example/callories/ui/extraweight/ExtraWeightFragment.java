@@ -24,10 +24,6 @@ public class ExtraWeightFragment extends Fragment {
     Activity context;
     private ExtraWeightFragmentBinding binding;
 
-    public static ExtraWeightFragment newInstance() {
-        return new ExtraWeightFragment();
-    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {

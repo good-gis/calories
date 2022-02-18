@@ -18,15 +18,11 @@ import com.example.callories.databinding.BazalMetFragmentBinding;
 import com.example.callories.helpers.GlobalVariables;
 import com.example.callories.helpers.NotifyHelper;
 
-public class BazalMetFragment extends Fragment {
+public class BasalMetabolismFragment extends Fragment {
 
     protected static AppDatabase db = MainDisplayActivity.db;
     Activity context;
     private BazalMetFragmentBinding binding;
-
-    public static BazalMetFragment newInstance() {
-        return new BazalMetFragment();
-    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,

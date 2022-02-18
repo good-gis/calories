@@ -26,10 +26,6 @@ public class DailyFreeCalFragment extends Fragment {
     Activity context;
     private DailyFreeCalFragmentBinding binding;
 
-    public static DailyFreeCalFragment newInstance() {
-        return new DailyFreeCalFragment();
-    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {

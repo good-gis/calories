@@ -2,7 +2,6 @@ package com.example.callories;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
@@ -31,12 +30,9 @@ public class RegistrationActivity extends AppCompatActivity {
         CheckBox isPolicyAccepted = findViewById(R.id.privateData);
         TextView authLink = findViewById(R.id.authLink);
 
-        authLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, AuthActivity.class);
-                RegistrationActivity.this.startActivity(intent);
-            }
+        authLink.setOnClickListener(v -> {
+            Intent intent = new Intent(RegistrationActivity.this, AuthActivity.class);
+            RegistrationActivity.this.startActivity(intent);
         });
 
         regBtn.setOnClickListener(v -> {

@@ -2,7 +2,6 @@ package com.example.callories;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
@@ -30,43 +29,37 @@ public class AuthActivity extends AppCompatActivity {
         TextView phone = findViewById(R.id.authPhone);
         TextView password = findViewById(R.id.authPassword);
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String userPhone = phone.getText().toString();
-                String userPassword = password.getText().toString();
+        submitButton.setOnClickListener(v -> {
+            String userPhone = phone.getText().toString();
+            String userPassword = password.getText().toString();
 
-                boolean isValidUserInput = validateUserData(userPhone, userPassword);
+            boolean isValidUserInput = validateUserData(userPhone, userPassword);
 
-                if (isValidUserInput) {
-                    User user = db.userDao().findByPhone(userPhone);
+            if (isValidUserInput) {
+                User user = db.userDao().findByPhone(userPhone);
 
-                    if (user == null) {
-                        NotifyHelper.showFastToast(getApplicationContext(), R.string.user_not_found);
-                    } else {
-                        boolean isAuthDataCorrect = authUser(user, userPassword);
-                        if (isAuthDataCorrect) {
-                            if (isRememberMe.isChecked()) {
-                                user.isRememberMe = true;
-                                db.userDao().updateUser(user);
-                            }
-                            ((GlobalVariables) getApplication()).setIsUserAuth(true);
-                            ((GlobalVariables) getApplication()).setUser(user);
-                            Intent intent = new Intent(AuthActivity.this, MainDisplayActivity.class);
-                            AuthActivity.this.startActivity(intent);
-                        } else {
-                            NotifyHelper.showFastToast(getApplicationContext(), R.string.password_is_wrong);
+                if (user == null) {
+                    NotifyHelper.showFastToast(getApplicationContext(), R.string.user_not_found);
+                } else {
+                    boolean isAuthDataCorrect = authUser(user, userPassword);
+                    if (isAuthDataCorrect) {
+                        if (isRememberMe.isChecked()) {
+                            user.isRememberMe = true;
+                            db.userDao().updateUser(user);
                         }
+                        ((GlobalVariables) getApplication()).setIsUserAuth(true);
+                        ((GlobalVariables) getApplication()).setUser(user);
+                        Intent intent = new Intent(AuthActivity.this, MainDisplayActivity.class);
+                        AuthActivity.this.startActivity(intent);
+                    } else {
+                        NotifyHelper.showFastToast(getApplicationContext(), R.string.password_is_wrong);
                     }
                 }
             }
         });
-        regLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AuthActivity.this, RegistrationActivity.class);
-                AuthActivity.this.startActivity(intent);
-            }
+        regLink.setOnClickListener(v -> {
+            Intent intent = new Intent(AuthActivity.this, RegistrationActivity.class);
+            AuthActivity.this.startActivity(intent);
         });
 
     }

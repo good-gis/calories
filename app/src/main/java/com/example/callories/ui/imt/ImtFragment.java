@@ -26,10 +26,6 @@ public class ImtFragment extends Fragment {
     Activity context;
     private ImtFragmentBinding binding;
 
-    public static ImtFragment newInstance() {
-        return new ImtFragment();
-    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {

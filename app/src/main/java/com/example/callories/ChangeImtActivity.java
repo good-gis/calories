@@ -26,9 +26,7 @@ public class ChangeImtActivity extends AppCompatActivity {
         Button changeBtn = findViewById(R.id.okImtBtn);
 
 
-        cancelBtn.setOnClickListener(v -> {
-            onBackPressed();
-        });
+        cancelBtn.setOnClickListener(v -> onBackPressed());
 
         changeBtn.setOnClickListener(v -> {
             if (newImt.getText().toString().equals("")) {

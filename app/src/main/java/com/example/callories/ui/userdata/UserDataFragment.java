@@ -25,10 +25,6 @@ public class UserDataFragment extends Fragment {
     private UserDataFragmentBinding binding;
     private User user;
 
-    public static UserDataFragment newInstance() {
-        return new UserDataFragment();
-    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
